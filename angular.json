@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "docs/conversor_moedas",
+            "outputPath": "dist/conversor_moedas",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
