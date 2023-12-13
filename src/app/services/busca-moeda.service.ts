@@ -15,7 +15,6 @@ export class BuscaMoedaService {
   private cashData: CashData | any
 
   getValue(moedas:string):Observable<CashData>{
-    //console.log(this.httpClient.get<CashData>(`${this.baseUrl}${moedas}`))
     this.cashData = this.httpClient.get<CashData>(`${this.baseUrl}${moedas}`)
     
     return this.cashData
