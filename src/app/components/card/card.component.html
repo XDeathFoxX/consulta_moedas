@@ -1,0 +1,14 @@
+<section class="tudo">
+    <main class="content"><!-- <input type="text" (input)="getValue($any($event.target).value)" > -->
+    <!-- <p>{{moeda.USDBRL.code}}</p> -->
+        <h1>Cotação USD - BRL</h1>
+        <section class="infos">
+            <p> Pares de moedas : {{ moeda.USDBRL.name }}</p>
+            <p>Maior valor: R$ {{ moeda.USDBRL.high }}</p>
+            <p>Menor valor: R$ {{ moeda.USDBRL.low }}</p>
+            <p>Valor de compra: R$ {{ moeda.USDBRL.bid }}</p>
+            <p>R$ 1 é o equivalente á U$ {{ moeda.USDBRL.converte }}</p>
+            <p>Horário da cotação: {{ moeda.USDBRL.create_date }}</p>
+        </section>
+    </main>
+</section>
