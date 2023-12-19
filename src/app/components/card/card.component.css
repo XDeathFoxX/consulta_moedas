@@ -26,3 +26,24 @@
     align-items: center;
     justify-content: center;
 }
+
+.atualiza {
+    border-radius: 10px;
+}
+
+span {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width:480px) {
+    span {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}

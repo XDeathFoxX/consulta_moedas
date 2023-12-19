@@ -1,14 +1,26 @@
 <section class="tudo">
-    <main class="content"><!-- <input type="text" (input)="getValue($any($event.target).value)" > -->
-    <!-- <p>{{moeda.USDBRL.code}}</p> -->
+    <main class="content">
         <h1>Cotação USD - BRL</h1>
         <section class="infos">
-            <p> Pares de moedas : {{ moeda.USDBRL.name }}</p>
-            <p>Maior valor: R$ {{ moeda.USDBRL.high }}</p>
-            <p>Menor valor: R$ {{ moeda.USDBRL.low }}</p>
-            <p>Valor de compra: R$ {{ moeda.USDBRL.bid }}</p>
-            <p>R$ 1 é o equivalente á U$ {{ moeda.USDBRL.converte }}</p>
-            <p>Horário da cotação: {{ moeda.USDBRL.create_date }}</p>
+            <span>
+                <p> Pares de moedas :</p><p>{{ moeda.USDBRL.name }}</p>
+            </span>
+            <span>
+                <p>Maior valor: </p><p>R$ {{ moeda.USDBRL.high }}</p>
+            </span>
+            <span>
+                <p>Menor valor: </p><p>R$ {{ moeda.USDBRL.low }}</p>
+            </span>
+            <span>
+                <p>Valor de compra: </p><p>R$ {{ moeda.USDBRL.bid }}</p>
+            </span>
+            <span>
+                <p>R$ 1 é o equivalente á </p><p>U$ {{ moeda.USDBRL.converte }}</p>
+            </span>
+            <span>
+                <p>Horário da cotação: </p><p>{{ moeda.USDBRL.create_date }}</p>
+            </span>
         </section>
+        <button class="atualiza" (click)="getValue()">Atualizar</button>
     </main>
 </section>
