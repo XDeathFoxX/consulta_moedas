@@ -1,26 +1,22 @@
-<section class="tudo">
-    <main class="content">
-        <h1>Cotação USD - BRL</h1>
-        <section class="infos">
-            <span>
-                <p> Pares de moedas :</p><p>{{ moeda.USDBRL.name }}</p>
-            </span>
-            <span>
-                <p>Maior valor: </p><p>R$ {{ moeda.USDBRL.high }}</p>
-            </span>
-            <span>
-                <p>Menor valor: </p><p>R$ {{ moeda.USDBRL.low }}</p>
-            </span>
-            <span>
-                <p>Valor de compra: </p><p>R$ {{ moeda.USDBRL.bid }}</p>
-            </span>
-            <span>
-                <p>R$ 1 é o equivalente á </p><p>U$ {{ moeda.USDBRL.converte }}</p>
-            </span>
-            <span>
-                <p>Horário da cotação: </p><p>{{ moeda.USDBRL.create_date }}</p>
-            </span>
-        </section>
-        <button class="atualiza" (click)="getValue()">Atualizar</button>
-    </main>
+<section class="infos">
+    <h1>Cotação USD - BRL</h1>
+    <span>
+        <p> Pares de moedas :</p><p>&nbsp;{{ moeda.USDBRL.name }}</p>
+    </span>
+    <span>
+        <p>Maior valor :</p><p>&nbsp;R$ {{ moeda.USDBRL.high }}</p>
+    </span>
+    <span>
+        <p>Menor valor:</p><p>&nbsp;R$ {{ moeda.USDBRL.low }}</p>
+    </span>
+    <span>
+        <p>Valor de compra: </p><p>&nbsp;R$ {{ moeda.USDBRL.bid }}</p>
+    </span>
+    <span>
+        <p>R$ 1 é o equivalente á </p><p>&nbsp;U$ {{ moeda.USDBRL.converte }}</p>
+    </span>
+    <span>
+        <p>Horário da cotação: </p><p>&nbsp;{{ moeda.USDBRL.create_date }}</p>
+    </span>
+    <button class="atualiza" (click)="getValue()">Atualizar</button>
 </section>

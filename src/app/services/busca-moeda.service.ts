@@ -8,7 +8,7 @@ import { CashData } from '../models/cashData'
 })
 export class BuscaMoedaService {
 
-  private baseUrl:string = "http://economia.awesomeapi.com.br/json/last/"
+  private baseUrl:string = "https://economia.awesomeapi.com.br/json/last/"
 
 
   constructor(private httpClient:HttpClient) {}

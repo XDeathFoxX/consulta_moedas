@@ -1,15 +1,6 @@
-.tudo {
+.infos {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 95vh;
-    width: 95vw;
-}
-
-.content {
-    display: flex;
-    width: 400px;
+    width: 25rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -20,15 +11,13 @@
     background-color: #A4FF29;
 }
 
-.infos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .atualiza {
     border-radius: 10px;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    background-color: #EDFAD9;
+    width: 10rem;
+    height: 1.5rem;
 }
 
 span {
@@ -37,13 +26,40 @@ span {
 }
 
 @media screen and (max-width:480px) {
+    .infos {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: 24rem;
+    }
+
     span {
         flex-direction: column;
         align-items: center;
     }
+}
 
-    .content {
+@media screen and (max-width:399px) {
+    .infos {
         margin-left: 2rem;
         margin-right: 2rem;
+        width: 17rem;
+    }
+
+    span {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .infos {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: 15rem;
+    }
+
+    span {
+        flex-direction: column;
+        align-items: center;
     }
 }
