@@ -7,10 +7,10 @@ import { BuscaMoedaService } from '../../services/busca_usdbrl';
   selector: 'app-card',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
+  templateUrl: './usdbrl.component.html',
+  styleUrl: './usdbrl.component.css'
 })
-export class CardComponent implements OnInit {
+export class usdbrlComponent implements OnInit {
   moeda:CashData
 
   constructor(private service:BuscaMoedaService){

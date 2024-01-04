@@ -3,7 +3,7 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
-import { BuscaMoedaService } from './services/busca-moeda.service';
+import { BuscaMoedaService } from './services/busca_usdbrl';
 import { HttpClientModule, provideHttpClient , withFetch} from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {

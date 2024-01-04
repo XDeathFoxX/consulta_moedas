@@ -1,0 +1,22 @@
+<section class="infos">
+    <h1>Cotação {{ moeda.EURBRL.code }} - {{ moeda.EURBRL.codein }}</h1>
+    <span>
+        <p> Pares de moedas :</p><p>&nbsp;{{ moeda.EURBRL.name }}</p>
+    </span>
+    <span>
+        <p>Maior valor :</p><p>&nbsp;R$ {{ moeda.EURBRL.high }}</p>
+    </span>
+    <span>
+        <p>Menor valor:</p><p>&nbsp;R$ {{ moeda.EURBRL.low }}</p>
+    </span>
+    <span>
+        <p>Valor de compra: </p><p>&nbsp;R$ {{ moeda.EURBRL.bid }}</p>
+    </span>
+    <span>
+        <p>R$ 1 é o equivalente á </p><p>&nbsp;U$ {{ moeda.EURBRL.converte }}</p>
+    </span>
+    <span>
+        <p>Horário da cotação: </p><p>&nbsp;{{ moeda.EURBRL.create_date }}</p>
+    </span>
+    <button class="atualiza" (click)="getValue()">Atualizar</button>
+</section>

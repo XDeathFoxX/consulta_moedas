@@ -1,21 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { CashData } from '../../models/usdbrl';
-import { BuscaMoedaService } from '../../services/busca_usdbrl';
+import { CashData } from '../../models/eurbrl';
+import { BuscaMoedaService } from '../../services/busca-eurbrl';
 
 @Component({
   selector: 'app-card',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
+  templateUrl: './eurbrl.component.html',
+  styleUrl: './eurbrl.component.css'
 })
-export class CardComponent implements OnInit {
+
+export class eurbrlComponent implements OnInit {
   moeda:CashData
 
   constructor(private service:BuscaMoedaService){
     this.moeda = {
-      USDBRL:{
+      EURBRL:{
           code: '',
           codein: '',
           name:'',
@@ -31,19 +32,19 @@ export class CardComponent implements OnInit {
   }
 
   getValue(){
-  this.service.getValue("USD-BRL").subscribe({
+  this.service.getValue("EUR-BRL").subscribe({
     next: (res) => {
 
       this.moeda = {
-        USDBRL:res.USDBRL
+        EURBRL:res.EURBRL
       }
 
       let float;
 
-      float = parseFloat(this.moeda.USDBRL.bid);
+      float = parseFloat(this.moeda.EURBRL.bid);
       float = 1 / float
       float = float.toFixed(4)
-      this.moeda.USDBRL.converte = float;
+      this.moeda.EURBRL.converte = float;
       
     },
     error : (err) => console.log('not found')

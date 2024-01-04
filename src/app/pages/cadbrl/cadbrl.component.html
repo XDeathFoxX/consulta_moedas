@@ -1,0 +1,22 @@
+<section class="infos">
+    <h1>Cotação {{ moeda.CADBRL.code }} - {{ moeda.CADBRL.codein }}</h1>
+    <span>
+        <p> Pares de moedas :</p><p>&nbsp;{{ moeda.CADBRL.name }}</p>
+    </span>
+    <span>
+        <p>Maior valor :</p><p>&nbsp;R$ {{ moeda.CADBRL.high }}</p>
+    </span>
+    <span>
+        <p>Menor valor:</p><p>&nbsp;R$ {{ moeda.CADBRL.low }}</p>
+    </span>
+    <span>
+        <p>Valor de compra: </p><p>&nbsp;R$ {{ moeda.CADBRL.bid }}</p>
+    </span>
+    <span>
+        <p>R$ 1 é o equivalente á </p><p>&nbsp;U$ {{ moeda.CADBRL.converte }}</p>
+    </span>
+    <span>
+        <p>Horário da cotação: </p><p>&nbsp;{{ moeda.CADBRL.create_date }}</p>
+    </span>
+    <button class="atualiza" (click)="getValue()">Atualizar</button>
+</section>
