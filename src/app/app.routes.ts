@@ -11,6 +11,8 @@ import { arsbrlComponent } from './pages/arsbrl/arsbrl.component';
 import { EurComponent } from './pages/eur/eur.component';
 import { UsdComponent } from './pages/usd/usd.component';
 import { BrlComponent } from './pages/brl/brl.component';
+import { btcbrlComponent } from './pages/btcbrl/btcbrl.component';
+import { ltcbrlComponent } from './pages/ltcbrl/ltcbrl.component';
 
 export const routes: Routes = [
     {
@@ -48,5 +50,11 @@ export const routes: Routes = [
     },
     {
         path:'brls',component:BrlComponent
+    },
+    {
+        path:'btcbrl',component:btcbrlComponent
+    },
+    {
+        path:'ltcbrl',component:ltcbrlComponent
     }
 ];

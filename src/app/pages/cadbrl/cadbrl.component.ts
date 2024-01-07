@@ -29,25 +29,22 @@ export class cadbrlComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.service.getValue("CAD-BRL").subscribe({
+      next: (res) => {
+  
+        this.moeda = {
+          CADBRL:res.CADBRL
+        }
+  
+        let float;
+  
+        float = parseFloat(this.moeda.CADBRL.bid);
+        float = 1 / float
+        float = float.toFixed(4)
+        this.moeda.CADBRL.converte = float;
+        
+      },
+      error : (err) => console.log('not found')
+    })
   }
-
-  getValue(){
-  this.service.getValue("CAD-BRL").subscribe({
-    next: (res) => {
-
-      this.moeda = {
-        CADBRL:res.CADBRL
-      }
-
-      let float;
-
-      float = parseFloat(this.moeda.CADBRL.bid);
-      float = 1 / float
-      float = float.toFixed(4)
-      this.moeda.CADBRL.converte = float;
-      
-    },
-    error : (err) => console.log('not found')
-  })
-}
 }

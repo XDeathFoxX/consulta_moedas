@@ -13,10 +13,9 @@
         <p>Valor de compra: </p><p>&nbsp;R$ {{ moeda.CADBRL.bid }}</p>
     </span>
     <span>
-        <p>R$ 1 é o equivalente á </p><p>&nbsp;U$ {{ moeda.CADBRL.converte }}</p>
+        <p>R$ 1 é o equivalente á </p><p>&nbsp;$ {{ moeda.CADBRL.converte }}</p>
     </span>
     <span>
         <p>Horário da cotação: </p><p>&nbsp;{{ moeda.CADBRL.create_date }}</p>
     </span>
-    <button class="atualiza" (click)="getValue()">Atualizar</button>
 </section>

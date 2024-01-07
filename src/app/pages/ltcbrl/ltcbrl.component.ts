@@ -1,22 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { CashData } from '../../models/btcusd';
-import { BuscaMoedaService } from '../../services/busca-btcusd.service';
+import { CashData } from '../../models/ltcbrl';
+import { BuscaMoedaService } from '../../services/busca-ltcbrl.service';
 
 @Component({
-  selector: 'card-btcusd',
+  selector: 'card-ltcbrl',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './btcusd.component.html',
-  styleUrl: './btcusd.component.css'
+  templateUrl: './ltcbrl.component.html',
+  styleUrl: './ltcbrl.component.css'
 })
 
-export class btcusdComponent implements OnInit {
+export class ltcbrlComponent implements OnInit {
   moeda:CashData
 
   constructor(private service:BuscaMoedaService){
     this.moeda = {
-      BTCUSD:{
+      LTCBRL:{
           code: '',
           codein: '',
           name:'',
@@ -29,19 +29,19 @@ export class btcusdComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.getValue("BTC-USD").subscribe({
+    this.service.getValue("LTC-BRL").subscribe({
       next: (res) => {
   
         this.moeda = {
-          BTCUSD:res.BTCUSD
+          LTCBRL:res.LTCBRL
         }
   
         let float;
   
-        float = parseFloat(this.moeda.BTCUSD.bid);
+        float = parseFloat(this.moeda.LTCBRL.bid);
         float = 1 / float
-        float = float.toFixed(7)
-        this.moeda.BTCUSD.converte = float;
+        float = float.toFixed(4)
+        this.moeda.LTCBRL.converte = float;
         
       },
       error : (err) => console.log('not found')

@@ -1,0 +1,21 @@
+<section class="infos">
+    <h1>Cotação {{ moeda.LTCBRL.code }} - {{ moeda.LTCBRL.codein }}</h1>
+    <span>
+        <p> Pares de moedas :</p><p>&nbsp;{{ moeda.LTCBRL.name }}</p>
+    </span>
+    <span>
+        <p>Maior valor :</p><p>&nbsp;R$ {{ moeda.LTCBRL.high }}</p>
+    </span>
+    <span>
+        <p>Menor valor:</p><p>&nbsp;R$ {{ moeda.LTCBRL.low }}</p>
+    </span>
+    <span>
+        <p>Valor de compra: </p><p>&nbsp;R$ {{ moeda.LTCBRL.bid }}</p>
+    </span>
+    <span>
+        <p>R$ 1 é o equivalente á </p><p>&nbsp;Ł {{ moeda.LTCBRL.converte }}</p>
+    </span>
+    <span>
+        <p>Horário da cotação: </p><p>&nbsp;{{ moeda.LTCBRL.create_date }}</p>
+    </span>
+</section>
