@@ -1,0 +1,22 @@
+<section class="infos">
+    <h1>Cotação {{ moeda.GBPBRL.code }} - {{ moeda.GBPBRL.codein }}</h1>
+    <span>
+        <p> Pares de moedas :</p><p>&nbsp;{{ moeda.GBPBRL.name }}</p>
+    </span>
+    <span>
+        <p>Maior valor :</p><p>&nbsp;R$ {{ moeda.GBPBRL.high }}</p>
+    </span>
+    <span>
+        <p>Menor valor:</p><p>&nbsp;R$ {{ moeda.GBPBRL.low }}</p>
+    </span>
+    <span>
+        <p>Valor de compra: </p><p>&nbsp;R$ {{ moeda.GBPBRL.bid }}</p>
+    </span>
+    <span>
+        <p>R$ 1 é o equivalente á </p><p>&nbsp;U$ {{ moeda.GBPBRL.converte }}</p>
+    </span>
+    <span>
+        <p>Horário da cotação: </p><p>&nbsp;{{ moeda.GBPBRL.create_date }}</p>
+    </span>
+    <button class="atualiza" (click)="getValue()">Atualizar</button>
+</section>

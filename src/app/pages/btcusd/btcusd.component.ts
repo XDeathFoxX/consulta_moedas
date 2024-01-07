@@ -4,7 +4,7 @@ import { CashData } from '../../models/btcusd';
 import { BuscaMoedaService } from '../../services/busca-btcusd.service';
 
 @Component({
-  selector: 'app-card',
+  selector: 'card-btcusd',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './btcusd.component.html',

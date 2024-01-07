@@ -4,7 +4,7 @@ import { CashData } from '../../models/eurbrl';
 import { BuscaMoedaService } from '../../services/busca-eurbrl';
 
 @Component({
-  selector: 'app-card',
+  selector: 'card-eurbrl',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './eurbrl.component.html',

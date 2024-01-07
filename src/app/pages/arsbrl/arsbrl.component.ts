@@ -1,22 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { CashData } from '../../models/cadbrl';
-import { BuscaMoedaService } from '../../services/busca-cadbrl.service';
+import { CashData } from '../../models/arsbrl';
+import { BuscaMoedaService } from '../../services/busca-arsbrl.service';
 
 @Component({
-  selector: 'card-cadbrl',
+  selector: 'card-arsbrl',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './cadbrl.component.html',
-  styleUrl: './cadbrl.component.css'
+  templateUrl: './arsbrl.component.html',
+  styleUrl: './arsbrl.component.css'
 })
 
-export class cadbrlComponent implements OnInit {
+export class arsbrlComponent implements OnInit {
   moeda:CashData
 
   constructor(private service:BuscaMoedaService){
     this.moeda = {
-      CADBRL:{
+      ARSBRL:{
           code: '',
           codein: '',
           name:'',
@@ -32,19 +32,19 @@ export class cadbrlComponent implements OnInit {
   }
 
   getValue(){
-  this.service.getValue("CAD-BRL").subscribe({
+  this.service.getValue("ARS-BRL").subscribe({
     next: (res) => {
 
       this.moeda = {
-        CADBRL:res.CADBRL
+        ARSBRL:res.ARSBRL
       }
 
       let float;
 
-      float = parseFloat(this.moeda.CADBRL.bid);
+      float = parseFloat(this.moeda.ARSBRL.bid);
       float = 1 / float
       float = float.toFixed(4)
-      this.moeda.CADBRL.converte = float;
+      this.moeda.ARSBRL.converte = float;
       
     },
     error : (err) => console.log('not found')

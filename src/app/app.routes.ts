@@ -5,6 +5,12 @@ import { eurbrlComponent } from './pages/eurbrl/eurbrl.component';
 import { btcusdComponent } from './pages/btcusd/btcusd.component';
 import { ethusdComponent } from './pages/ethusd/ethusd.component';
 import { cadbrlComponent } from './pages/cadbrl/cadbrl.component';
+import { usdbrltComponent } from './pages/usdbrlt/usdbrlt.component';
+import { gbpbrlComponent } from './pages/gbpbrl/gbpbrl.component';
+import { arsbrlComponent } from './pages/arsbrl/arsbrl.component';
+import { EurComponent } from './pages/eur/eur.component';
+import { UsdComponent } from './pages/usd/usd.component';
+import { BrlComponent } from './pages/brl/brl.component';
 
 export const routes: Routes = [
     {
@@ -24,5 +30,23 @@ export const routes: Routes = [
     },
     {
         path:'cadbrl',component:cadbrlComponent
+    },
+    {
+        path:'usdbrlt',component:usdbrltComponent
+    },
+    {
+        path:'gbpbrl',component:gbpbrlComponent
+    },
+    {
+        path:'arsbrl',component:arsbrlComponent
+    },
+    {
+        path:'eurs',component:EurComponent
+    },
+    {
+        path:'usds',component:UsdComponent
+    },
+    {
+        path:'brls',component:BrlComponent
     }
 ];

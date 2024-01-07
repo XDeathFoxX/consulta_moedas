@@ -1,0 +1,22 @@
+<section class="infos">
+    <h1>Cotação {{ moeda.USDBRLT.code }} - {{ moeda.USDBRLT.codein }}</h1>
+    <span>
+        <p> Pares de moedas :</p><p>&nbsp;{{ moeda.USDBRLT.name }}</p>
+    </span>
+    <span>
+        <p>Maior valor :</p><p>&nbsp;R$ {{ moeda.USDBRLT.high }}</p>
+    </span>
+    <span>
+        <p>Menor valor:</p><p>&nbsp;R$ {{ moeda.USDBRLT.low }}</p>
+    </span>
+    <span>
+        <p>Valor de compra: </p><p>&nbsp;R$ {{ moeda.USDBRLT.bid }}</p>
+    </span>
+    <span>
+        <p>R$ 1 é o equivalente á </p><p>&nbsp;U$ {{ moeda.USDBRLT.converte }}</p>
+    </span>
+    <span>
+        <p>Horário da cotação: </p><p>&nbsp;{{ moeda.USDBRLT.create_date }}</p>
+    </span>
+    <button class="atualiza" (click)="getValue()">Atualizar</button>
+</section>

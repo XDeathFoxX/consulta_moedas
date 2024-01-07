@@ -4,7 +4,7 @@ import { CashData } from '../../models/ethusd';
 import { BuscaMoedaService } from '../../services/busca-ethusd.service';
 
 @Component({
-  selector: 'app-card',
+  selector: 'card-ethusd',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './ethusd.component.html',
