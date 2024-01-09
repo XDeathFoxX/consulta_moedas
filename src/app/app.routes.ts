@@ -13,6 +13,8 @@ import { UsdComponent } from './pages/usd/usd.component';
 import { BrlComponent } from './pages/brl/brl.component';
 import { btcbrlComponent } from './pages/btcbrl/btcbrl.component';
 import { ltcbrlComponent } from './pages/ltcbrl/ltcbrl.component';
+import { ethbrlComponent } from './pages/ethbrl/ethbrl.component';
+import { dogebrlComponent } from './pages/dogebrl/dogebrl.component';
 
 export const routes: Routes = [
     {
@@ -56,5 +58,11 @@ export const routes: Routes = [
     },
     {
         path:'ltcbrl',component:ltcbrlComponent
+    },
+    {
+        path:'ethbrl',component:ethbrlComponent
+    },
+    {
+        path:'dogebrl',component:dogebrlComponent
     }
 ];
