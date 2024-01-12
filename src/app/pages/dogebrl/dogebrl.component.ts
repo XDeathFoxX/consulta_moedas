@@ -4,7 +4,7 @@ import { CashData } from '../../models/dogebrl';
 import { BuscaMoedaService } from '../../services/busca-dogebrl.service';
 
 @Component({
-  selector: 'card-ethusd',
+  selector: 'card-dogebrl',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './dogebrl.component.html',
