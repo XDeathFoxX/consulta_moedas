@@ -1,17 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { CashData } from '../../models/ethbrl';
-import { BuscaMoedaService } from '../../services/busca-ethbrl.service';
+import { CashData } from '../../models/btceuro';
+import { BuscaMoedaService } from '../../services/busca-eurobtc.service';
 
 @Component({
-  selector: 'card-ethbrl',
+  selector: 'card-btceuro',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './ethbrl.component.html',
-  styleUrl: './ethbrl.component.css'
+  templateUrl: './btceuro.component.html',
+  styleUrl: './btceuro.component.css'
 })
 
-export class ethbrlComponent implements OnInit {
+export class btceurComponent implements OnInit {
   @ViewChild('myInput') myInput:ElementRef | any
   moeda:CashData;
   @Input()
@@ -19,7 +19,7 @@ export class ethbrlComponent implements OnInit {
 
   constructor(private service:BuscaMoedaService){
     this.moeda = {
-      ETHBRL:{
+      BTCEUR:{
           code: '',
           codein: '',
           name:'',
@@ -32,19 +32,19 @@ export class ethbrlComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.getValue("ETH-BRL").subscribe({
+    this.service.getValue("BTC-EUR").subscribe({
       next: (res) => {
   
         this.moeda = {
-          ETHBRL:res.ETHBRL
+          BTCEUR:res.BTCEUR
         }
   
         let float;
   
-        float = parseFloat(this.moeda.ETHBRL.bid);
+        float = parseFloat(this.moeda.BTCEUR.bid);
         float = 1 / float
-        float = float.toFixed(4)
-        this.moeda.ETHBRL.converte = float;
+        float = float.toFixed(7)
+        this.moeda.BTCEUR.converte = float;
         
       },
       error : (err) => console.log('not found')
@@ -53,8 +53,8 @@ export class ethbrlComponent implements OnInit {
   click() {
     let float
     const input = this.myInput.nativeElement.value
-    float = input / parseFloat(this.moeda.ETHBRL.bid)
-    float = float.toFixed(4)
+    float = input / parseFloat(this.moeda.BTCEUR.bid)
+    float = float.toFixed(7)
     this.valorconvertido = float
     console.log(this.valorconvertido)
   }

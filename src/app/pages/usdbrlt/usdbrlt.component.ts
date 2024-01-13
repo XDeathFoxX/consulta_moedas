@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { CashData } from '../../models/usdbrlt';
 import { BuscaMoedaService } from '../../services/busca-usdbrlt.service';
 
@@ -12,7 +12,10 @@ import { BuscaMoedaService } from '../../services/busca-usdbrlt.service';
 })
 
 export class usdbrltComponent implements OnInit {
-  moeda:CashData
+  @ViewChild('myInput') myInput:ElementRef | any
+  moeda:CashData;
+  @Input()
+  valorconvertido!: String;
 
   constructor(private service:BuscaMoedaService){
     this.moeda = {
@@ -46,5 +49,13 @@ export class usdbrltComponent implements OnInit {
       },
       error : (err) => console.log('not found')
     })
+  }
+  click() {
+    let float
+    const input = this.myInput.nativeElement.value
+    float = input / parseFloat(this.moeda.USDBRLT.bid)
+    float = float.toFixed(2)
+    this.valorconvertido = float
+    console.log(this.valorconvertido)
   }
 }

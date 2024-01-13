@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { CashData } from '../../models/ltcbrl';
 import { BuscaMoedaService } from '../../services/busca-ltcbrl.service';
 
@@ -12,7 +12,10 @@ import { BuscaMoedaService } from '../../services/busca-ltcbrl.service';
 })
 
 export class ltcbrlComponent implements OnInit {
-  moeda:CashData
+  @ViewChild('myInput') myInput:ElementRef | any
+  moeda:CashData;
+  @Input()
+  valorconvertido!: String;
 
   constructor(private service:BuscaMoedaService){
     this.moeda = {
@@ -46,5 +49,13 @@ export class ltcbrlComponent implements OnInit {
       },
       error : (err) => console.log('not found')
     })
+  }
+  click() {
+    let float
+    const input = this.myInput.nativeElement.value
+    float = input / parseFloat(this.moeda.LTCBRL.bid)
+    float = float.toFixed(4)
+    this.valorconvertido = float
+    console.log(this.valorconvertido)
   }
 }

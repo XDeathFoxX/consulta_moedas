@@ -15,6 +15,8 @@ import { btcbrlComponent } from './pages/btcbrl/btcbrl.component';
 import { ltcbrlComponent } from './pages/ltcbrl/ltcbrl.component';
 import { ethbrlComponent } from './pages/ethbrl/ethbrl.component';
 import { dogebrlComponent } from './pages/dogebrl/dogebrl.component';
+import { btceurComponent } from './pages/btceuro/btceuro.component';
+import { vefbrlComponent } from './pages/vefbrl/vefbrl.component';
 
 export const routes: Routes = [
     {
@@ -64,5 +66,11 @@ export const routes: Routes = [
     },
     {
         path:'dogebrl',component:dogebrlComponent
+    },
+    {
+        path:'btceuro',component:btceurComponent
+    },
+    {
+        path:'vefbrl',component:vefbrlComponent
     }
 ];

@@ -1,0 +1,26 @@
+<section class="infos">
+    <h1>Cotação {{ moeda.BTCEUR.code }} - {{ moeda.BTCEUR.codein }}</h1>
+    <span>
+        <p> Pares de moedas :</p><p>&nbsp;{{ moeda.BTCEUR.name }}</p>
+    </span>
+    <span>
+        <p>Maior valor :</p><p>&nbsp;€ {{ moeda.BTCEUR.high }}</p>
+    </span>
+    <span>
+        <p>Menor valor:</p><p>&nbsp;€ {{ moeda.BTCEUR.low }}</p>
+    </span>
+    <span>
+        <p>Valor de compra: </p><p>&nbsp;€ {{ moeda.BTCEUR.bid }}</p>
+    </span>
+    <span>
+        <p>€ 1 é o equivalente á </p><p>&nbsp;₿ {{ moeda.BTCEUR.converte }}</p>
+    </span>
+    <span class="conversao">
+        <input #myInput type="number" id="valor" name="valor"  placeholder="Digite aqui">
+        <button (click)="click()">=</button>
+        <p>₿ {{ this.valorconvertido }}</p>
+    </span>
+    <span>
+        <p>Horário da cotação: </p><p>&nbsp;{{ moeda.BTCEUR.create_date }}</p>
+    </span>
+</section>

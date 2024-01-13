@@ -15,6 +15,11 @@
     <span>
         <p>R$ 1 é o equivalente á </p><p>&nbsp;Ð {{ moeda.DOGEBRL.converte }}</p>
     </span>
+    <span class="conversao">
+        <input #myInput type="number" id="valor" name="valor"  placeholder="Digite aqui">
+        <button (click)="click()">=</button>
+        <p>Ð {{ this.valorconvertido }}</p>
+    </span>
     <span>
         <p>Horário da cotação: </p><p>&nbsp;{{ moeda.DOGEBRL.create_date }}</p>
     </span>
