@@ -1,0 +1,22 @@
+{
+  "routes": [
+    "/",
+    "/arsbrl",
+    "/brls",
+    "/btcbrl",
+    "/btceuro",
+    "/btcusd",
+    "/cadbrl",
+    "/dogebrl",
+    "/ethbrl",
+    "/ethusd",
+    "/eurbrl",
+    "/eurs",
+    "/gbpbrl",
+    "/ltcbrl",
+    "/usdbrl",
+    "/usdbrlt",
+    "/usds",
+    "/vefbrl"
+  ]
+}
